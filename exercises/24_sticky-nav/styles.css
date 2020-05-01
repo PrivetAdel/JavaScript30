@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #eeeeee;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+body {
+  margin: 0;
+}
+
+.site-wrap {
+  max-width: 90%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 60px 40px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .05);
+  transition: transform 0.5s;
+}
+
+header {
+  text-align: center;
+  height: 50vh;
+  background: #212121;
+  background: url('https://source.unsplash.com/hFzIoD0F_i8');
+  background-position: 0 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'helvetica neue';
+  color: #ffffff;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.main-nav {
+  background: #212121;
+  top: 0;
+  width: 100%;
+  transition:all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+li.logo a {
+  color: #212121;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: #ffffff;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.fixed-nav .main-nav {
+  transition: all 0.5s;
+  position: fixed;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
+
+.fixed-nav .main-nav a {
+  transition: all 0.5s;
+  padding: 5px;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}}
+::-webkit-resizer { background-color: #666;}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 18px;
+    line-height: 46px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .site-wrap {
+    max-width: 100%;
+    padding: 50px 20px;
+  }
+
+  .main-nav a {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .pic {
+    width: 100%;
+    height: auto;
+  }
+
+  li:last-child {
+    display: none;
+  }
+}

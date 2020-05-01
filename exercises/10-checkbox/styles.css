@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(145deg, #24aa94, #41b57c);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+.inbox {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 10px;
+  user-select: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  text-decoration: line-through;
+}
+
+label {
+  margin: 0;
+  padding: 12px 10px 12px 70px;
+  transition: background 0.2s;
+  flex: 1;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 36px;
+  font-family: 'helvetica';
+  position: relative;
+  cursor: pointer;
+}
+
+label::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border: 1px solid grey;
+  position: absolute;
+  margin: 5px 0 0 0;
+  left: 20px;
+}
+
+input:checked + label::after {
+  content: "";
+  background-image: url("tick.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 24px;
+  top: 10px;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .inbox {
+    min-width: 100%;
+    margin: 0;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 0;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}

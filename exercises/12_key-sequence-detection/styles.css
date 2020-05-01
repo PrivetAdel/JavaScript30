@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'arial';
+  background-color: #94d3f4;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 38px;
+}
+
+img {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+img.show {
+  display: block;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    height: 100vh;
+  }
+
+  img {
+    height: 100%;
+  }
+}

@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg,#7117ea 0%,#ea6060 100%);
+  min-height: 100vh;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.search {
+  padding: 10px;
+}
+
+.search-form {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 5px solid #F7F7F7;
+  position: relative;
+  border-radius: 5px;
+  font-size: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  z-index: 2;
+}
+
+.search-result {
+  max-width: 400px;
+  padding: 0 5px;
+  margin: 0 auto 50px;
+}
+
+.search-result li {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background: #fafafa;
+  padding: 20px;
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  text-transsearch-form: capitalize;
+}
+
+.search-result li:nth-child(odd) {
+  background: #f0f3f0;
+}
+
+.search-result li .search-highlight {
+  color: #ffffff;
+  background: #7117ea;
+}
+
+.population {
+  font-size: 15px;
+  font-weight: lighter;
+  opacity: .8;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-track {  background-color: #7117ea;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #7117ea; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #7117ea;}}
+::-webkit-resizer { background-color: #7117ea;}

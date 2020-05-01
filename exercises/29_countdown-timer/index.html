@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Timer</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="timer">
+      <button data-time="20" type="button" name="button">20 secs</button>
+      <button data-time="60" type="button" name="button">1 min</button>
+      <button data-time="300" type="button" name="button">5 mins</button>
+      <button data-time="900" type="button" name="button">15 mins</button>
+      <button data-time="1200" type="button" name="button">20 mins</button>
+      <button data-time="3600" type="button" name="button">1 hour</button>
+      <form name="customForm" class="" action="" method="">
+        <input type="number" min="1" name="minutes" placeholder="Enter Minutes">
+      </form>
+    </div>
+    <div class="display">
+      <p class="display__time-left">00:00:00</p>
+      <audio src="openhat.wav"></audio>
+      <div class="display__end">
+        <p>Back at&#8194;</p>
+        <p class="display__end-time">00:00:00</p>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
