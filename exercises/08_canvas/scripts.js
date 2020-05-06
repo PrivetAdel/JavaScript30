@@ -1,17 +1,16 @@
 const canvas = document.querySelector(`#canvas`);
 const ctx = canvas.getContext(`2d`);
-canvas.width = window.innerWidth * .9;
-canvas.height = window.innerHeight * .9;
+
 ctx.lineJoin = `round`;
 ctx.lineCap = `round`;
-ctx.lineWidth = 50;
+ctx.lineWidth = 10;
 
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-let hue = 300
+let hue = 300;
 let color = true;
-let direction = true;
+let thickness = true;
 
 function draw(evt) {
   if (!isDrawing) return;
@@ -27,10 +26,10 @@ function draw(evt) {
   }
   color ? hue++ : hue--;
 
-  if (ctx.lineWidth >= 70 || ctx.lineWidth <= 10) {
-    direction = !direction;
+  if (ctx.lineWidth >= 10 || ctx.lineWidth <= 1) {
+    thickness = !thickness;
   }
-  direction ? ctx.lineWidth++ : ctx.lineWidth--;
+  thickness ? ctx.lineWidth++ : ctx.lineWidth--;
 }
 
 canvas.addEventListener(`mousedown`, (evt) => {
